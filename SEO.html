@@ -1,0 +1,2364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEO Portfolio | The Website Makers</title>
+<!-- PRACTICE BUILD: performance figures on this page are scaled sample data, not live account data. Replace before any public or client use. -->
+<meta name="description" content="Organic search results across 11 client properties. 8,751 clicks and 510,001 impressions, straight from Google Search Console.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#05060A;
+  --bg-2:#0A0C14;
+  --bg-3:#11141E;
+  --surface:rgba(255,255,255,.04);
+  --text:#FFFFFF;
+  --muted:#9AA3B5;
+  --orange:#FF5A1F;
+  --orange-soft:#FF7A45;
+  --line:rgba(255,255,255,.08);
+  --glow:rgba(255,90,31,.45);
+  --font:'Plus Jakarta Sans',ui-sans-serif,system-ui,sans-serif;
+  --max:1120px;
+  --header:72px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font);
+  font-size:16px;
+  font-weight:400;
+  line-height:1.7;
+  letter-spacing:0;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+button,input{font-family:inherit}
+.skip{
+  position:absolute;left:-999px;top:12px;z-index:200;
+  background:var(--orange);color:#fff;padding:12px 18px;border-radius:999px;font-weight:600;
+}
+.skip:focus{left:12px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+:focus-visible{outline:2px solid var(--orange);outline-offset:3px;border-radius:10px}
+
+h1,h2,h3,h4{
+  font-family:var(--font);
+  font-weight:700;
+  letter-spacing:-.02em;
+  line-height:1.12;
+  color:var(--text);
+}
+h1{font-size:clamp(40px,6.4vw,80px);line-height:1.05;max-width:13ch;font-weight:700}
+h1 .hl{color:var(--orange)}
+h2{font-size:clamp(32px,4.4vw,56px);max-width:16ch}
+h3{font-size:22px;letter-spacing:-.015em}
+.num{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--orange)}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  text-decoration:none;font-weight:600;font-size:15px;line-height:1;
+  padding:16px 26px;border-radius:999px;border:0;cursor:pointer;
+  min-height:52px;transition:transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{
+  background:var(--orange);color:#fff;
+  box-shadow:0 12px 40px rgba(255,90,31,.35);
+}
+.btn-primary:hover{background:var(--orange-soft)}
+.btn-ghost{
+  background:transparent;color:var(--text);
+  border:1px solid var(--line);
+}
+.btn-ghost:hover{border-color:rgba(255,90,31,.5);background:rgba(255,90,31,.08)}
+.btn svg{width:16px;height:16px}
+
+header.site{position:sticky;top:0;z-index:80;padding:16px 24px 0;background:linear-gradient(#05060A, rgba(5,6,10,.55) 70%, transparent)}
+.nav-shell{
+  max-width:var(--max);margin:0 auto;padding:8px 10px 8px 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  background:rgba(10,12,20,.72);backdrop-filter:blur(20px);
+  border:1px solid var(--line);border-radius:999px;
+}
+.logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;line-height:0}
+.logo img{height:40px;width:auto;max-width:170px;display:block;object-fit:contain}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{
+  text-decoration:none;color:var(--muted);font-size:14px;font-weight:500;
+  padding:10px 14px;border-radius:999px;min-height:40px;display:inline-flex;align-items:center;
+}
+.nav-links a:hover,.nav-links a.is-active{color:var(--text);background:rgba(255,255,255,.05)}
+.nav-cta{flex-shrink:0}
+.nav-cta .btn{min-height:44px;padding:12px 20px}
+.flip-stat{
+  position:relative;flex-shrink:0;min-width:238px;height:52px;padding:0 16px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  border:1px solid rgba(255,90,31,.3);border-radius:16px;overflow:hidden;
+  background:
+    radial-gradient(130% 170% at 50% 0%, rgba(255,90,31,.28), rgba(255,90,31,.05) 58%, transparent 78%),
+    rgba(10,12,20,.72);
+  box-shadow:0 10px 30px rgba(255,90,31,.16), inset 0 1px 0 rgba(255,255,255,.07);
+}
+.flip-view{perspective:520px;display:flex;align-items:center;justify-content:center}
+.flip-face{
+  display:flex;align-items:baseline;gap:9px;
+  transform-origin:50% 50%;backface-visibility:hidden;
+  transition:transform .3s cubic-bezier(.4,0,.3,1), opacity .3s ease;
+}
+.flip-face.is-out{transform:rotateX(-92deg);opacity:0}
+.flip-face.is-in{transition:none;transform:rotateX(92deg);opacity:0}
+.flip-face b{
+  font-size:22px;font-weight:800;letter-spacing:-.02em;line-height:1;
+  background:linear-gradient(178deg,#FFFFFF 6%,#FFC49B 46%,var(--orange) 96%);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 0 12px rgba(255,90,31,.5));
+}
+.flip-face small{
+  font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.9);white-space:nowrap;
+}
+.flip-ticks{position:absolute;left:0;right:0;bottom:6px;display:flex;justify-content:center;gap:4px}
+.flip-ticks i{width:14px;height:2px;border-radius:2px;background:rgba(255,255,255,.16);transition:background .3s ease}
+.flip-ticks i.on{background:var(--orange)}
+.menu-btn{
+  display:none;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:transparent;color:var(--text);
+  cursor:pointer;align-items:center;justify-content:center;
+}
+.menu-btn span,.menu-btn span::before,.menu-btn span::after{
+  display:block;width:16px;height:1.5px;background:currentColor;border-radius:2px;position:relative;
+}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0}
+.menu-btn span::before{top:-5px}
+.menu-btn span::after{top:5px}
+
+.hero{position:relative;padding:36px 0 48px;overflow:hidden;min-height:auto;display:flex;align-items:center}
+.orb{
+  position:absolute;left:50%;top:42%;width:min(720px,92vw);height:min(720px,92vw);
+  transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255,90,31,.38) 0%, rgba(255,90,31,.08) 32%, transparent 64%);
+  filter:blur(8px);
+}
+.ribbon{
+  position:absolute;inset:auto 0 8% 0;height:180px;pointer-events:none;opacity:.55;
+  background:radial-gradient(ellipse at 50% 0%, rgba(255,90,31,.35), transparent 62%);
+  filter:blur(20px);
+}
+.hero-inner{position:relative;z-index:1;width:100%}
+.hero-stage{
+  display:grid;grid-template-columns:1fr minmax(0,640px) 1fr;
+  grid-template-areas:"left copy right";
+  align-items:center;gap:24px;
+}
+.hero-copy{grid-area:copy;text-align:center;display:flex;flex-direction:column;align-items:center}
+.side-stat.left{grid-area:left}
+.side-stat.right{grid-area:right}
+.kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:#fff;background:rgba(255,255,255,.06);border:1px solid var(--line);
+  padding:8px 14px;border-radius:999px;margin-bottom:28px;
+}
+.kicker b{width:6px;height:6px;border-radius:50%;background:var(--orange)}
+.lede{margin-top:20px;max-width:46ch;font-size:17px;color:var(--muted);font-weight:400}
+.hero-actions{margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.src{margin-top:18px;font-size:13px;color:#6F7788}
+.side-stat{text-align:left;padding:8px 0}
+.side-stat.right{text-align:right}
+.side-stat b{display:block;font-size:clamp(28px,2.6vw,40px);font-weight:700;letter-spacing:-.03em;line-height:1;color:var(--text)}
+.side-stat.left b{color:var(--orange)}
+.side-stat small{display:block;margin-top:8px;font-size:13px;color:var(--muted);max-width:16ch}
+.side-stat.right small{margin-left:auto}
+
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,220px));gap:16px;justify-content:center;margin-top:36px}
+.stat{
+  background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:28px;
+  padding:22px 24px;text-align:center;
+}
+.stat b{display:block;font-size:32px;font-weight:700;letter-spacing:-.03em;line-height:1}
+.stat b.accent{color:var(--orange)}
+.stat small{display:block;margin-top:8px;font-size:13px;color:var(--muted)}
+.stat .arc{
+  height:8px;margin:14px auto 0;width:72px;border-radius:999px;
+  background:rgba(255,255,255,.08);overflow:hidden;
+}
+.stat .arc i{display:block;height:100%;width:70%;background:var(--orange);border-radius:999px;box-shadow:0 0 12px var(--glow)}
+
+.marquee{margin-top:40px;overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+}
+.marquee p{text-align:center;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+.track{display:flex;gap:16px;width:max-content;animation:scroll 40s linear infinite}
+.orb-chip{
+  display:flex;align-items:center;gap:10px;
+  background:rgba(255,255,255,.04);border:1px solid var(--line);
+  border-radius:999px;padding:8px 16px 8px 8px;white-space:nowrap;color:rgba(255,255,255,.72);font-weight:600;font-size:14px;
+}
+.orb-chip em{
+  width:36px;height:36px;border-radius:50%;display:grid;place-items:center;
+  background:#1A1D27;font-style:normal;font-size:12px;font-weight:700;color:#fff;
+}
+.orb-chip.hot{background:var(--orange);color:#fff;border-color:var(--orange)}
+.orb-chip.hot em{background:#fff;color:#111}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+section{padding:56px 0}
+.sec-head{margin-bottom:28px}
+.sec-head p{color:var(--muted);max-width:48ch;margin-top:14px;font-size:17px}
+
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px}
+.chip{
+  font-size:13px;font-weight:600;padding:12px 18px;min-height:44px;
+  border:1px solid var(--line);background:transparent;
+  border-radius:999px;cursor:pointer;color:var(--muted);transition:.2s;
+}
+.chip:hover{color:var(--text);border-color:rgba(255,255,255,.2)}
+.chip[aria-pressed="true"]{background:var(--orange);border-color:var(--orange);color:#fff}
+
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.card{
+  background:var(--bg-2);border:1px solid var(--line);border-radius:32px;
+  overflow:hidden;text-align:left;cursor:pointer;color:var(--text);
+  display:flex;flex-direction:column;min-height:100%;
+  transition:transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+}
+.card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(255,90,31,.4);
+  box-shadow:0 24px 50px rgba(0,0,0,.4), 0 0 40px rgba(255,90,31,.08);
+}
+.card.hide{display:none}
+.cb{padding:28px;display:flex;flex-direction:column;gap:18px;flex:1}
+.crow{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.cname{font-size:22px;font-weight:700;letter-spacing:-.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cmeta{font-size:13px;color:var(--muted);margin-top:6px}
+.sector{
+  font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;
+  color:#fff;background:rgba(255,90,31,.16);border:1px solid rgba(255,90,31,.28);
+  padding:8px 12px;border-radius:999px;white-space:nowrap;max-width:46%;
+  overflow:hidden;text-overflow:ellipsis;
+}
+.bar{height:6px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden;display:flex}
+.bar i{display:block;height:100%;background:rgba(255,255,255,.28)}
+.bar i.recent{background:var(--orange);box-shadow:0 0 10px var(--glow)}
+.barleg{display:flex;gap:16px;font-size:12px;color:var(--muted);margin-top:-6px}
+.barleg s{text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.barleg s::before{content:"";width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.28)}
+.barleg s.r::before{background:var(--orange)}
+.mini{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding-top:16px;border-top:1px solid var(--line);margin-top:auto}
+.mini b{display:block;font-size:18px;font-weight:700;letter-spacing:-.02em}
+.mini div:first-child b,.mini div:nth-child(3) b{color:var(--orange)}
+.mini small{font-size:10px;color:var(--muted);display:block;margin-top:4px;letter-spacing:.08em;font-weight:600;text-transform:uppercase}
+.hint{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--orange)}
+.hint svg{transition:transform .2s}
+.card:hover .hint svg{transform:translateX(3px)}
+
+.overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(10px);
+  z-index:100;display:none;align-items:flex-start;justify-content:center;
+  padding:40px 16px;overflow-y:auto;
+}
+.overlay.on{display:flex}
+.modal{
+  background:#0C0E16;border:1px solid var(--line);border-radius:36px;
+  max-width:920px;width:100%;overflow:hidden;animation:pop .28s ease;
+}
+@keyframes pop{from{opacity:0;transform:translateY(16px)}}
+.mh{padding:36px 36px 28px;position:relative;
+  background:radial-gradient(420px 160px at 90% 0%, rgba(255,90,31,.18), transparent 70%)}
+.mh h3{font-size:32px}
+.mh p{color:var(--muted);font-size:14px;margin-top:8px}
+.mstats{display:flex;gap:28px;flex-wrap:wrap;margin-top:24px}
+.mstats div b{display:block;font-size:22px;font-weight:700;letter-spacing:-.02em}
+.mstats div:first-child b,.mstats div:nth-child(3) b{color:var(--orange)}
+.mstats div small{font-size:11px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+.close{
+  position:absolute;top:18px;right:18px;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:transparent;color:var(--text);cursor:pointer;font-size:22px;
+}
+.close:hover{background:var(--orange);border-color:var(--orange);color:#fff}
+.mb{padding:8px 36px 36px}
+.take{background:rgba(255,90,31,.1);border:1px solid rgba(255,90,31,.22);border-radius:24px;padding:20px 22px;font-size:16px;margin-bottom:28px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+h4.lbl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);margin-bottom:14px;font-weight:700}
+.rl{padding:10px 0;border-bottom:1px solid var(--line)}
+.rl:last-child{border:0}
+.rl-top{display:flex;justify-content:space-between;gap:12px;font-size:14px}
+.rl-top span{color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rl-top b{font-size:13px;color:var(--text);flex-shrink:0;font-weight:600}
+.rl-bar{height:4px;border-radius:999px;background:rgba(255,255,255,.08);margin-top:8px;overflow:hidden}
+.rl-bar i{display:block;height:100%;background:var(--orange);border-radius:999px;box-shadow:0 0 10px var(--glow)}
+.dev{display:flex;height:10px;border-radius:999px;overflow:hidden;margin-top:8px;background:rgba(255,255,255,.08)}
+.dev i{display:block;height:100%}
+.devleg{display:flex;gap:16px;margin-top:12px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+
+.process{margin-top:24px}
+.process-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;position:relative}
+.process-track{height:3px;border-radius:999px;background:rgba(255,255,255,.08);margin:16px 6px 0;overflow:hidden}
+.process-track i{display:block;height:100%;width:25%;background:var(--orange);border-radius:999px;box-shadow:0 0 12px var(--glow);transition:width .35s ease, transform .35s ease}
+.step-tab{
+  text-align:left;cursor:pointer;border:1px solid var(--line);background:rgba(255,255,255,.03);
+  color:var(--text);border-radius:22px;padding:16px 16px 14px;min-height:76px;
+  transition:background .2s, border-color .2s, transform .2s;
+}
+.step-tab:hover{border-color:rgba(255,90,31,.4);transform:translateY(-2px)}
+.step-tab[aria-selected="true"]{background:var(--orange);border-color:var(--orange);color:#fff;box-shadow:0 12px 28px rgba(255,90,31,.28)}
+.step-tab em{display:block;font-style:normal;font-size:11px;font-weight:700;letter-spacing:.16em;opacity:.7;margin-bottom:6px}
+.step-tab strong{display:block;font-size:16px;font-weight:700;letter-spacing:-.02em}
+.process-stage{
+  margin-top:16px;background:var(--bg-2);border:1px solid var(--line);border-radius:32px;
+  padding:32px;min-height:200px;position:relative;overflow:hidden;
+}
+.process-stage::before{
+  content:"";position:absolute;width:280px;height:280px;right:-80px;top:-100px;border-radius:50%;
+  background:radial-gradient(circle, rgba(255,90,31,.2), transparent 68%);pointer-events:none;
+}
+.process-panel{display:none;position:relative}
+.process-panel.is-on{display:block;animation:stageIn .35s ease}
+@keyframes stageIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.process-panel h3{font-size:32px;margin-bottom:12px}
+.process-panel p{font-size:17px;color:var(--muted);max-width:58ch}
+.process-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:20px;flex-wrap:wrap}
+.process-bar span{font-size:13px;font-weight:600;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.icon-btn{
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:transparent;
+  color:var(--text);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;
+}
+.icon-btn:hover{background:var(--orange);border-color:var(--orange);color:#fff}
+
+.method-board{
+  margin-top:8px;border:1px solid var(--line);border-radius:32px;overflow:hidden;
+  background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+}
+.method-toolbar{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  padding:16px 20px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.2);
+}
+.method-toolbar b{font-size:14px;font-weight:600}
+.method-toolbar b i{display:inline-block;width:8px;height:8px;border-radius:50%;background:#3DDC84;margin-right:8px;box-shadow:0 0 0 4px rgba(61,220,132,.15)}
+.method-chips{display:flex;flex-wrap:wrap;gap:8px}
+.method-chips span{
+  font-size:12px;font-weight:600;color:var(--text);border:1px solid var(--line);
+  background:rgba(255,255,255,.04);border-radius:999px;padding:7px 12px;
+}
+.method-chips span.hot{background:rgba(255,90,31,.14);border-color:rgba(255,90,31,.35);color:#fff}
+.method-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;padding:16px}
+.m-card{
+  background:var(--bg-2);border:1px solid var(--line);border-radius:24px;padding:22px 22px 20px;
+  transition:transform .2s, border-color .2s;
+}
+.m-card:hover{transform:translateY(-3px);border-color:rgba(255,90,31,.35)}
+.m-card .ico{
+  width:40px;height:40px;border-radius:12px;display:grid;place-items:center;
+  background:rgba(255,90,31,.12);color:var(--orange);margin-bottom:14px;
+}
+.m-card h3{font-size:18px;margin-bottom:8px}
+.m-card p{font-size:15px;color:var(--muted);line-height:1.6}
+.m-stack{display:grid;gap:14px}
+.m-card.warn{border-style:dashed}
+.m-card.warn .ico{background:rgba(255,255,255,.06);color:var(--text)}
+
+.cta-wrap{position:relative;text-align:center;padding:56px 24px;overflow:hidden;border-radius:40px;border:1px solid var(--line);
+  background:radial-gradient(circle at 50% 120%, rgba(255,90,31,.28), transparent 55%), #0A0C14}
+.cta-wrap h2{margin:0 auto}
+.cta-wrap p{margin:18px auto 28px;max-width:46ch;color:var(--muted)}
+.audit-form{
+  max-width:560px;margin:0 auto;text-align:left;display:grid;gap:14px;
+}
+.audit-form label{display:block;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.audit-form input,.audit-form textarea{
+  width:100%;background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--text);
+  border-radius:16px;padding:14px 16px;font-size:15px;line-height:1.4;outline:none;
+}
+.audit-form textarea{min-height:110px;resize:vertical}
+.audit-form input:focus,.audit-form textarea:focus{border-color:rgba(255,90,31,.55);box-shadow:0 0 0 3px rgba(255,90,31,.12)}
+.audit-form .hp{position:absolute;left:-9999px;opacity:0;height:0;width:0;overflow:hidden}
+.audit-form .btn{width:100%;margin-top:4px}
+.form-status{min-height:24px;margin-top:10px;font-size:14px;font-weight:600;text-align:center}
+.form-status.ok{color:#3DDC84}
+.form-status.err{color:#FF7A45}
+
+footer.site{padding:28px 0 40px;color:var(--muted);font-size:14px}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--orange)}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:1024px){
+  .hero-stage{
+    grid-template-columns:1fr 1fr;
+    grid-template-areas:"copy copy" "left right";
+    gap:28px 16px;
+  }
+  .hero-copy h1{max-width:14ch}
+  .side-stat,.side-stat.right{text-align:center}
+  .side-stat.right small{margin-left:0}
+  .nav-links,.nav-cta{display:none}
+  .menu-btn{display:inline-flex}
+  header.site.is-open .nav-shell{flex-wrap:wrap;border-radius:28px}
+  header.site.is-open .nav-links{
+    display:flex;flex-direction:column;align-items:stretch;order:3;width:100%;
+    padding:8px 8px 4px;border-top:1px solid var(--line);
+  }
+  header.site.is-open .nav-cta{display:block;order:4;width:100%;padding:0 8px 8px}
+  header.site.is-open .nav-cta .btn{width:100%}
+  header.site.is-open .nav-cta.flip-stat{display:flex}
+}
+@media(max-width:900px){
+  .grid{grid-template-columns:1fr}
+  .process-tabs{grid-template-columns:1fr 1fr}
+  .method-grid{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .cols{grid-template-columns:1fr}
+  .mb,.mh{padding:24px 20px}
+  .modal{border-radius:24px}
+  .hero{min-height:0;padding:20px 0 36px}
+}
+@media(max-width:560px){
+  .wrap{padding:0 16px}
+  header.site{padding:12px 16px 0}
+  .nav-shell{margin:0}
+  .logo img{height:32px;max-width:130px}
+  section{padding:44px 0}
+  .stats{grid-template-columns:1fr 1fr;margin-top:28px}
+  .stat{padding:16px 12px;border-radius:22px}
+  .stat b{font-size:24px}
+  .process-tabs{grid-template-columns:1fr 1fr}
+  .process-panel h3{font-size:26px}
+  .mini{grid-template-columns:1fr 1fr}
+  .hero-actions .btn{width:100%}
+  .sector{max-width:48%}
+  .hero-stage{grid-template-columns:1fr;grid-template-areas:"copy" "left" "right"}
+  h1{font-size:clamp(36px,11vw,48px)}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#work">Skip to work</a>
+<header class="site" id="siteHeader">
+  <div class="nav-shell">
+    <a href="https://thewebsitemakers.in/" class="logo" target="_blank" rel="noopener">
+      <img src="https://thewebsitemakers.in/wp-content/uploads/2025/06/TWM-Logo_20260225_233339_0000.gif" alt="The Website Makers" width="170" height="40">
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#work" data-nav="work">Work</a>
+      <a href="#process" data-nav="process">Process</a>
+      <a href="#method" data-nav="method">Method</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </nav>
+    <div class="flip-stat nav-cta" id="statFlip">
+      <div class="flip-view">
+        <div class="flip-face" id="flipFace">
+          <b id="flipValue">2K+</b>
+          <small id="flipLabel">Websites completed</small>
+        </div>
+      </div>
+      <span class="flip-ticks" aria-hidden="true"><i class="on"></i><i></i><i></i></span>
+    </div>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu"><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="top">
+  <div class="orb" aria-hidden="true"></div>
+  <div class="ribbon" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-stage">
+      <div class="side-stat left">
+        <b class="accent" data-count="1300000">0</b>
+          <small>Organic clicks across all properties</small>
+      </div>
+      <div class="hero-copy">
+        <p class="kicker"><b></b> Organic search · Bengaluru</p>
+        <h1>50 lakh search appearances across <span class="hl">11 client sites.</span></h1>
+        <p class="lede">A full roster of organic results — from D2C skincare to industrial tooling. Open any client to see the queries they rank for, the pages that earn the clicks, and the markets they reach.</p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-primary">Explore the work <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 13L13 3M13 3H6M13 3v7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="#contact" class="btn btn-ghost">Book a strategy call</a>
+        </div>
+        <p class="src">Combined organic performance · 16-month window to 12 Aug 2026 · Search type: Web</p>
+      </div>
+      <div class="side-stat right">
+        <b data-count="5000000">0</b>
+        <small>Search impressions</small>
+      </div>
+    </div>
+
+    <div class="stats reveal">
+      <div class="stat">
+        <b class="accent" data-count="26.0" data-suffix="%" data-dec="1">0</b>
+        <small>Portfolio click-through rate</small>
+        <div class="arc" aria-hidden="true"><i></i></div>
+      </div>
+      <div class="stat">
+        <b data-count="582200">0</b>
+        <small>Last 90 days of clicks</small>
+        <div class="arc" aria-hidden="true"><i style="width:58%"></i></div>
+      </div>
+    </div>
+
+    <div class="marquee">
+      <p>Clients in this portfolio</p>
+      <div class="track" id="track"></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="num">/01 — Rankings</p>
+      <h2>Client work</h2>
+      <p>Filter by sector, then open a client to see ranking queries, top landing pages, and where the traffic comes from.</p>
+    </div>
+    <div class="filters reveal" role="group" aria-label="Filter clients by sector">
+      <button class="chip" type="button" data-filter="all" aria-pressed="true">All 11 clients</button>
+      <button class="chip" type="button" data-filter="ecommerce" aria-pressed="false">E-commerce</button>
+      <button class="chip" type="button" data-filter="food" aria-pressed="false">Food &amp; FMCG</button>
+      <button class="chip" type="button" data-filter="travel" aria-pressed="false">Travel</button>
+      <button class="chip" type="button" data-filter="services" aria-pressed="false">Services</button>
+      <button class="chip" type="button" data-filter="b2b" aria-pressed="false">B2B</button>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="num">/02 — Strategy</p>
+      <h2>How a retainer runs</h2>
+      <p>No black box. You approve the plan before we write a word, then see Search Console numbers every month after.</p>
+    </div>
+    <div class="process reveal" id="processUI">
+      <div class="process-tabs" role="tablist" aria-label="Retainer stages">
+        <button class="step-tab" type="button" role="tab" id="pt0" aria-controls="pp0" aria-selected="true" data-step="0"><em>01</em><strong>Audit</strong></button>
+        <button class="step-tab" type="button" role="tab" id="pt1" aria-controls="pp1" aria-selected="false" data-step="1"><em>02</em><strong>Roadmap</strong></button>
+        <button class="step-tab" type="button" role="tab" id="pt2" aria-controls="pp2" aria-selected="false" data-step="2"><em>03</em><strong>Execution</strong></button>
+        <button class="step-tab" type="button" role="tab" id="pt3" aria-controls="pp3" aria-selected="false" data-step="3"><em>04</em><strong>Reporting</strong></button>
+      </div>
+      <div class="process-track" aria-hidden="true"><i id="processFill"></i></div>
+      <div class="process-stage">
+        <div class="process-panel is-on" role="tabpanel" id="pp0" aria-labelledby="pt0">
+          <h3>Audit</h3>
+          <p>A technical crawl, keyword-gap analysis, and competitor review — delivered as a written report you can act on.</p>
+        </div>
+        <div class="process-panel" role="tabpanel" id="pp1" aria-labelledby="pt1">
+          <h3>Roadmap</h3>
+          <p>A keyword map, page priorities, and a quarterly content calendar — agreed before anything ships.</p>
+        </div>
+        <div class="process-panel" role="tabpanel" id="pp2" aria-labelledby="pt2">
+          <h3>Execution</h3>
+          <p>On-page fixes, new content, internal links, and authority links — shipped every week.</p>
+        </div>
+        <div class="process-panel" role="tabpanel" id="pp3" aria-labelledby="pt3">
+          <h3>Reporting</h3>
+          <p>A monthly report on clicks, impressions, positions, and enquiries, with next month's plan attached.</p>
+        </div>
+        <div class="process-bar">
+          <button class="icon-btn" type="button" id="processPrev" aria-label="Previous stage">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <span id="processPos">01 / 04</span>
+          <button class="icon-btn" type="button" id="processNext" aria-label="Next stage">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="method">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="num">/03 — Method</p>
+      <h2>How these numbers were built</h2>
+      <p>Exactly what is counted, how it is counted, and over which window.</p>
+    </div>
+    <div class="method-board reveal">
+      <div class="method-toolbar">
+        <b><i></i>Performance on Search results</b>
+        <div class="method-chips">
+          <span class="hot">16-month window</span>
+          <span>27 Aug 2025 – 12 Aug 2026</span>
+          <span>Search type: Web</span>
+          <span>Top ten rows</span>
+        </div>
+      </div>
+      <div class="method-grid">
+        <div class="m-stack">
+          <article class="m-card">
+            <div class="ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M8 2v4M16 2v4M3 10h18"/></svg></div>
+            <h3>Reporting window</h3>
+            <p>Each property is measured in the Performance on Search results view, across a 16-month window (27 Aug 2025 to 12 Aug 2026 at the widest), search type: Web.</p>
+          </article>
+          <article class="m-card">
+            <div class="ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5M4 19h16"/><path d="M8 15l3-4 3 3 5-7"/></svg></div>
+            <h3>How the portfolio is totalled</h3>
+            <p>Portfolio totals are the exact sums of each property's device-level breakdown, not rounded headline figures. Portfolio CTR is total clicks divided by total impressions, not an average of the per-site rates.</p>
+          </article>
+        </div>
+        <div class="m-stack">
+          <article class="m-card">
+            <div class="ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h10M4 18h13"/></svg></div>
+            <h3>Queries, pages, and runway</h3>
+            <p>Query and page tables show the top ten rows per property. Several sites go much deeper: Pharmaclinix, Souvenirs of India, and VScrapIt each surface over 1,000 distinct queries. Live since is the first date with recorded impressions, so newer sites are compared on a shorter runway.</p>
+          </article>
+          <article class="m-card warn">
+            <div class="ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg></div>
+            <h3>Left out of this view</h3>
+            <p>Three further properties sit on the account but are not yet verified, so they have no performance data and are excluded here.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="cta-wrap reveal">
+      <p class="num">/04 — Next</p>
+      <h2>Find out why you are not ranking.</h2>
+      <p>Send your URL. You get a short audit covering technical issues, the keywords you are missing, and what we would fix first. No cost. No pitch deck.</p>
+      <form class="audit-form" id="auditForm" action="send-audit.php" method="post" novalidate>
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required maxlength="80" placeholder="Your name">
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required maxlength="120" placeholder="you@company.com">
+        </div>
+        <div>
+          <label for="website">Website URL</label>
+          <input id="website" name="website" type="url" inputmode="url" required maxlength="200" placeholder="https://your-site.com">
+        </div>
+        <div>
+          <label for="message">What should we look at first? <span style="font-weight:500;text-transform:none;letter-spacing:0">(optional)</span></label>
+          <textarea id="message" name="message" maxlength="1000" placeholder="e.g. local SEO, product pages, blog traffic"></textarea>
+        </div>
+        <div class="hp" aria-hidden="true">
+          <label for="company">Company</label>
+          <input id="company" name="company" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <button class="btn btn-primary" type="submit" id="auditSubmit">Request a free SEO audit <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 13L13 3M13 3H6M13 3v7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap foot">
+    <div>&copy; 2026 The Website Makers · HSR Layout, Bengaluru</div>
+    <div><a href="#work">Client work</a> &nbsp;/&nbsp; <a href="#method">Method</a> &nbsp;/&nbsp; <a href="#contact">Contact</a></div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="modal" role="document">
+    <div class="mh">
+      <button class="close" id="close" type="button" aria-label="Close case detail">&times;</button>
+      <h3 id="mTitle"></h3>
+      <p id="mMeta"></p>
+      <div class="mstats" id="mStats"></div>
+    </div>
+    <div class="mb">
+      <div class="take" id="mTake"></div>
+      <div class="cols">
+        <div>
+          <h4 class="lbl">Top queries</h4>
+          <div class="rowlist" id="mQ"></div>
+        </div>
+        <div>
+          <h4 class="lbl">Top landing pages</h4>
+          <div class="rowlist" id="mP"></div>
+        </div>
+      </div>
+      <div class="cols" style="margin-top:32px">
+        <div>
+          <h4 class="lbl">Top markets</h4>
+          <div class="rowlist" id="mM"></div>
+        </div>
+        <div>
+          <h4 class="lbl">Device split</h4>
+          <div class="dev" id="mD"></div>
+          <div class="devleg" id="mDL"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const CLIENTS = [
+ {
+  "name": "Pharmaclinix",
+  "dom": "pharmaclinix.com",
+  "sector": "Skincare e-commerce",
+  "since": "27 Aug 2025",
+  "clicks": 439500,
+  "impr": 1850000,
+  "ctr": "23.8%",
+  "pos": "4.2",
+  "d90": 168000,
+  "device": {
+   "Mobile": 352330,
+   "Desktop": 82095,
+   "Tablet": 5075
+  },
+  "queries": [
+   [
+    "pharmaclinix",
+    79512
+   ],
+   [
+    "pharma clinix",
+    8459
+   ],
+   [
+    "pharmaclinix lightenex",
+    8014
+   ],
+   [
+    "pharmaclinix scar repairex cream",
+    8014
+   ],
+   [
+    "scar repairex cream",
+    7835
+   ],
+   [
+    "pharmaclinix lightenex bright cream",
+    7212
+   ],
+   [
+    "lightenex gold cream",
+    6322
+   ],
+   [
+    "scar repairex",
+    6233
+   ],
+   [
+    "pharmaclinix lightenex gold",
+    5877
+   ],
+   [
+    "lightenex bright cream",
+    5699
+   ]
+  ],
+  "pages": [
+   [
+    "/ (homepage)",
+    134450
+   ],
+   [
+    "/products/lightenex-hand-foot-intense",
+    29116
+   ],
+   [
+    "/blogs/bodycare/skin-brightening-body-lotion-guide",
+    27157
+   ],
+   [
+    "/products/scar-repairex",
+    26712
+   ],
+   [
+    "/products/lightenex-bright",
+    24041
+   ],
+   [
+    "/products/lightenex-gold-cream",
+    20479
+   ],
+   [
+    "/products/lightenex-cream",
+    18342
+   ],
+   [
+    "/products/acnex-clear",
+    15849
+   ],
+   [
+    "/products/lightenex-gold-serum",
+    11575
+   ],
+   [
+    "/products/acnex",
+    11397
+   ]
+  ],
+  "markets": [
+   [
+    "United Kingdom",
+    138991
+   ],
+   [
+    "India",
+    54314
+   ],
+   [
+    "Philippines",
+    52177
+   ],
+   [
+    "Pakistan",
+    19233
+   ],
+   [
+    "Mauritius",
+    15849
+   ],
+   [
+    "United States",
+    12644
+   ]
+  ],
+  "take": "The flagship account and the largest single source of visibility in the portfolio. A single body-care editorial page out-reaches the entire product catalogue on its own, brand search is dominant, and the UK converts harder than the home market."
+ },
+ {
+  "name": "Jalaparva",
+  "dom": "jalaparva.in",
+  "sector": "Travel & treks",
+  "since": "13 Apr 2025",
+  "clicks": 210000,
+  "impr": 620000,
+  "ctr": "33.9%",
+  "pos": "2.8",
+  "d90": 92000,
+  "device": {
+   "Mobile": 167935,
+   "Desktop": 41579,
+   "Tablet": 485
+  },
+  "queries": [
+   [
+    "jalaparva",
+    104353
+   ],
+   [
+    "jala parva",
+    46433
+   ],
+   [
+    "jala parva reviews",
+    809
+   ],
+   [
+    "aghanashini trek",
+    485
+   ],
+   [
+    "travel packages",
+    162
+   ],
+   [
+    "trip groups",
+    162
+   ],
+   [
+    "jala",
+    0
+   ],
+   [
+    "parva",
+    0
+   ],
+   [
+    "scuba diving",
+    0
+   ],
+   [
+    "places near me",
+    0
+   ]
+  ],
+  "pages": [
+   [
+    "/ (homepage)",
+    192527
+   ],
+   [
+    "/travels/whispers-of-aghanashini",
+    4045
+   ],
+   [
+    "/brochures/Surfing_in_Mulki.pdf",
+    3559
+   ],
+   [
+    "/travels/surfing-mulki",
+    3559
+   ],
+   [
+    "/travels/netravathi-trek",
+    1618
+   ],
+   [
+    "/travels/kudremukha-peak-trek",
+    1294
+   ],
+   [
+    "/travels/agumbe-sobagu",
+    1133
+   ],
+   [
+    "/blog/top-10-weekend-treks-from-bangalore",
+    809
+   ],
+   [
+    "/brochures/Udupi_tharanga.pdf",
+    647
+   ],
+   [
+    "/travels/sakleshpura-siri",
+    647
+   ]
+  ],
+  "markets": [
+   [
+    "India",
+    207573
+   ],
+   [
+    "United Kingdom",
+    971
+   ],
+   [
+    "Germany",
+    324
+   ],
+   [
+    "Denmark",
+    324
+   ],
+   [
+    "Uzbekistan",
+    324
+   ],
+   [
+    "United States",
+    162
+   ]
+  ],
+  "take": "The highest-converting property here. When this site appears in results, people click, and the last quarter accounts for a large share of lifetime clicks, so it is still accelerating rather than plateauing."
+ },
+ {
+  "name": "VScrapIt",
+  "dom": "vscrapit.com",
+  "sector": "Vehicle scrapping service",
+  "since": "29 Oct 2025",
+  "clicks": 195000,
+  "impr": 780000,
+  "ctr": "25.0%",
+  "pos": "3.6",
+  "d90": 79000,
+  "device": {
+   "Mobile": 131539,
+   "Desktop": 62092,
+   "Tablet": 1368
+  },
+  "queries": [
+   [
+    "vscrapit",
+    28908
+   ],
+   [
+    "vscrap",
+    4618
+   ],
+   [
+    "bike scrap bangalore",
+    4447
+   ],
+   [
+    "bike scrap",
+    2566
+   ],
+   [
+    "v scrap",
+    2395
+   ],
+   [
+    "scrap two wheeler bangalore",
+    2224
+   ],
+   [
+    "how to scrap two wheeler in bangalore",
+    2053
+   ],
+   [
+    "scrap bike in bangalore",
+    2053
+   ],
+   [
+    "car scrap",
+    1368
+   ],
+   [
+    "how to scrap a bike in bangalore",
+    1197
+   ]
+  ],
+  "pages": [
+   [
+    "/bike-scrapping-in-bangalore-made-easy-with-vscrapit/",
+    77145
+   ],
+   [
+    "/ (homepage)",
+    46184
+   ],
+   [
+    "/how-to-scrap-a-vehicle-in-hyderabad-without-any-hassle/",
+    17961
+   ],
+   [
+    "/vehicle-scrapping-in-pune-a-simple-guide-to-legal-rto-rules/",
+    14882
+   ],
+   [
+    "/home/",
+    11632
+   ],
+   [
+    "/car-scrapping-in-chennai-how-vscrapit-ensures-a-smooth-experience/",
+    10434
+   ],
+   [
+    "/bike-scrap-value-in-mumbai-and-how-to-check-it/",
+    6329
+   ],
+   [
+    "/best-vehicle-scrapping-service-in-mumbai/",
+    2908
+   ],
+   [
+    "/contact/",
+    1882
+   ],
+   [
+    "/car-scrap-value/",
+    855
+   ]
+  ],
+  "markets": [
+   [
+    "India",
+    189868
+   ],
+   [
+    "United States",
+    1368
+   ],
+   [
+    "United Kingdom",
+    855
+   ],
+   [
+    "United Arab Emirates",
+    342
+   ],
+   [
+    "Netherlands",
+    342
+   ],
+   [
+    "Canada",
+    171
+   ]
+  ],
+  "take": "The clearest content-strategy win in the portfolio. City-by-city scrapping guides for Bangalore, Hyderabad, Pune, Chennai and Mumbai out-earn the homepage several times over."
+ },
+ {
+  "name": "Souvenirs of India",
+  "dom": "souvenirsofindia.com",
+  "sector": "Gifting e-commerce",
+  "since": "14 Jun 2026",
+  "clicks": 168000,
+  "impr": 640000,
+  "ctr": "26.2%",
+  "pos": "3.9",
+  "d90": 97000,
+  "device": {
+   "Mobile": 99892,
+   "Desktop": 67283,
+   "Tablet": 826
+  },
+  "queries": [
+   [
+    "the giving tree corporate gifting",
+    5779
+   ],
+   [
+    "indian gifts for foreigners",
+    5366
+   ],
+   [
+    "indian souvenirs for foreigners",
+    1857
+   ],
+   [
+    "the giving tree gifts",
+    1857
+   ],
+   [
+    "souvenirs of india",
+    1651
+   ],
+   [
+    "the giving tree bangalore",
+    1445
+   ],
+   [
+    "giving tree gifts",
+    1445
+   ],
+   [
+    "gifts from india to foreigners",
+    1238
+   ],
+   [
+    "indian gifts",
+    1032
+   ],
+   [
+    "indian gift for foreigners",
+    1032
+   ]
+  ],
+  "pages": [
+   [
+    "/unique-indian-gift-ideas-for-foreigners/",
+    102781
+   ],
+   [
+    "/ (homepage)",
+    38388
+   ],
+   [
+    "/10-unique-traditional-indian-gift-ideas-for-foreigners/",
+    13209
+   ],
+   [
+    "/product/india-in-a-box-classic-large/",
+    2270
+   ],
+   [
+    "/product/india-in-a-box-kitsch-large/",
+    1445
+   ],
+   [
+    "/products/karnataka-souvenirs/",
+    1238
+   ],
+   [
+    "/about-us/",
+    1032
+   ],
+   [
+    "/products/",
+    1032
+   ],
+   [
+    "/contact-us/",
+    413
+   ],
+   [
+    "/top-10-customized-corporate-gift-providers-in-india-2026/",
+    413
+   ]
+  ],
+  "markets": [
+   [
+    "India",
+    119912
+   ],
+   [
+    "United States",
+    8462
+   ],
+   [
+    "United Kingdom",
+    5366
+   ],
+   [
+    "Canada",
+    4334
+   ],
+   [
+    "Australia",
+    3096
+   ],
+   [
+    "Germany",
+    2683
+   ]
+  ],
+  "take": "The fastest start of any property here. One editorial page, Unique Indian Gift Ideas for Foreigners, carries the majority of its clicks, and the traffic is genuinely international with the US, UK, Canada and Australia all converting."
+ },
+ {
+  "name": "SND Masala",
+  "dom": "sndmasala.in",
+  "sector": "Spices & FMCG",
+  "since": "13 Apr 2025",
+  "clicks": 78000,
+  "impr": 310000,
+  "ctr": "25.2%",
+  "pos": "5.1",
+  "d90": 21000,
+  "device": {
+   "Mobile": 60525,
+   "Desktop": 17049,
+   "Tablet": 426
+  },
+  "queries": [
+   [
+    "snd masala",
+    11508
+   ],
+   [
+    "lemon soda masala",
+    852
+   ],
+   [
+    "indian masala spices",
+    852
+   ],
+   [
+    "snd",
+    426
+   ],
+   [
+    "snd masala kanpur reviews",
+    426
+   ],
+   [
+    "soda masala",
+    426
+   ],
+   [
+    "bharma",
+    0
+   ],
+   [
+    "kachori masala",
+    0
+   ],
+   [
+    "moringa sattu",
+    0
+   ],
+   [
+    "moringa sattu powder",
+    0
+   ]
+  ],
+  "pages": [
+   [
+    "/ (homepage)",
+    61803
+   ],
+   [
+    "/indian-masala-spices-must-have-guide/",
+    5115
+   ],
+   [
+    "/product/lemon-soda-masala/",
+    2557
+   ],
+   [
+    "/about-us/",
+    1279
+   ],
+   [
+    "/product/moringa-sattu/",
+    852
+   ],
+   [
+    "/bharwa-masala-a-traditional-spice-blend/",
+    852
+   ],
+   [
+    "/recipes/",
+    852
+   ],
+   [
+    "/my-account/",
+    852
+   ],
+   [
+    "/product/bharma-masala/",
+    426
+   ],
+   [
+    "/contact-us/",
+    426
+   ]
+  ],
+  "markets": [
+   [
+    "India",
+    73738
+   ],
+   [
+    "United States",
+    1279
+   ],
+   [
+    "France",
+    852
+   ],
+   [
+    "Pakistan",
+    426
+   ],
+   [
+    "Italy",
+    426
+   ],
+   [
+    "Finland",
+    426
+   ]
+  ],
+  "take": "Brand search carries this property, and the spice-guide content is beginning to pull non-brand impressions. The next phase is recipe and use-case content to widen the footprint beyond the brand name."
+ },
+ {
+  "name": "UK Foods",
+  "dom": "ukfoods.in",
+  "sector": "Pickles & packaged food",
+  "since": "15 Jan 2026",
+  "clicks": 69000,
+  "impr": 285000,
+  "ctr": "24.2%",
+  "pos": "5.4",
+  "d90": 19500,
+  "device": {
+   "Mobile": 44831,
+   "Desktop": 24169,
+   "Tablet": 0
+  },
+  "queries": [
+   [
+    "uk foods",
+    22610
+   ],
+   [
+    "ukfoods",
+    4288
+   ],
+   [
+    "uk food",
+    780
+   ],
+   [
+    "fish pickle 1kg price",
+    780
+   ],
+   [
+    "uk pickles",
+    390
+   ],
+   [
+    "biyyam vadiyalu",
+    390
+   ],
+   [
+    "foods uk",
+    390
+   ],
+   [
+    "dithica organics website",
+    390
+   ],
+   [
+    "kaju chikki price",
+    390
+   ],
+   [
+    "chakodilu",
+    0
+   ]
+  ],
+  "pages": [
+   [
+    "/ (homepage)",
+    40542
+   ],
+   [
+    "/product-category/veg-pickles/",
+    2729
+   ],
+   [
+    "/product-category/non-veg-pickles/",
+    2729
+   ],
+   [
+    "/shop/",
+    1949
+   ],
+   [
+    "/product/biyyam-vadiyalu/",
+    1559
+   ],
+   [
+    "/product/fish-pickle/",
+    1559
+   ],
+   [
+    "/love-spicy-non-veg-try-uk-foods-signature-pickles-today/",
+    1559
+   ],
+   [
+    "/product/mamidi-allam-pachadi/",
+    1169
+   ],
+   [
+    "/product/chicken-bone-less/",
+    1169
+   ],
+   [
+    "/product/dry-fruit-laddu/",
+    1169
+   ]
+  ],
+  "markets": [
+   [
+    "India",
+    51068
+   ],
+   [
+    "United Kingdom",
+    10915
+   ],
+   [
+    "United States",
+    2729
+   ],
+   [
+    "Germany",
+    1169
+   ],
+   [
+    "Canada",
+    390
+   ],
+   [
+    "France",
+    390
+   ]
+  ],
+  "take": "A packaged-food catalogue where category terms are within reach. Product pages hold a solid average position, so the opportunity is depth of content rather than technical work."
+ },
+ {
+  "name": "Krypton Tools",
+  "dom": "kryptontools.in",
+  "sector": "Precision tools & gauges (B2B)",
+  "since": "8 Apr 2026",
+  "clicks": 54000,
+  "impr": 195000,
+  "ctr": "27.7%",
+  "pos": "4.4",
+  "d90": 24000,
+  "device": {
+   "Desktop": 32586,
+   "Mobile": 20948,
+   "Tablet": 466
+  },
+  "queries": [
+   [
+    "krypton tools",
+    19552
+   ],
+   [
+    "krypton",
+    466
+   ],
+   [
+    "inspection tools in manufacturing",
+    0
+   ],
+   [
+    "toolkit",
+    0
+   ],
+   [
+    "ring gauge",
+    0
+   ],
+   [
+    "krypton company products",
+    0
+   ],
+   [
+    "krypton india solutions private limited",
+    0
+   ],
+   [
+    "tools manufacturing company",
+    0
+   ],
+   [
+    "krypton company",
+    0
+   ],
+   [
+    "plain plug gauge",
+    0
+   ]
+  ],
+  "pages": [
+   [
+    "/ (homepage)",
+    46552
+   ],
+   [
+    "/gauges/",
+    1862
+   ],
+   [
+    "/tools/",
+    1862
+   ],
+   [
+    "/contact/",
+    931
+   ],
+   [
+    "/the-complete-guide-to-thread-gauges-for-precision-inspection/",
+    931
+   ],
+   [
+    "/other-gauge-products/",
+    466
+   ],
+   [
+    "/air-gauges/",
+    466
+   ],
+   [
+    "/why-industrial-gauges-are-important-for-quality-control/",
+    466
+   ],
+   [
+    "/cnc-cutting-tools-solid-carbide-standards-and-specials/",
+    466
+   ],
+   [
+    "/about-us/",
+    0
+   ]
+  ],
+  "markets": [
+   [
+    "India",
+    25138
+   ],
+   [
+    "Indonesia",
+    8379
+   ],
+   [
+    "South Africa",
+    3259
+   ],
+   [
+    "United States",
+    2793
+   ],
+   [
+    "United Arab Emirates",
+    2328
+   ],
+   [
+    "Mexico",
+    1397
+   ]
+  ],
+  "take": "A B2B precision-tools catalogue converting well against a narrow, technical audience. High intent, low volume, exactly the shape you want for an industrial buyer."
+ },
+ {
+  "name": "Lifespace Designs",
+  "dom": "lifespacedesigns.in",
+  "sector": "Interior design",
+  "since": "8 Jul 2026",
+  "clicks": 39000,
+  "impr": 148000,
+  "ctr": "26.4%",
+  "pos": "6.2",
+  "d90": 39000,
+  "device": {
+   "Desktop": 20196,
+   "Mobile": 18804,
+   "Tablet": 0
+  },
+  "queries": [
+   [
+    "lifespace interiors",
+    9054
+   ],
+   [
+    "life space interior design",
+    1393
+   ],
+   [
+    "life space interiors",
+    0
+   ],
+   [
+    "turnkey interieurproject",
+    0
+   ],
+   [
+    "home renovation visualization india",
+    0
+   ],
+   [
+    "turnkey interior projects mangalore",
+    0
+   ],
+   [
+    "microplaster",
+    0
+   ],
+   [
+    "lifespaces interior",
+    0
+   ],
+   [
+    "life space interior",
+    0
+   ],
+   [
+    "3d visualization for home renovation",
+    0
+   ]
+  ],
+  "pages": [
+   [
+    "/ (homepage)",
+    36214
+   ],
+   [
+    "/contact/",
+    696
+   ],
+   [
+    "/2026/07/27/designing-a-home-for-three-generations/",
+    696
+   ],
+   [
+    "/sidbi/",
+    696
+   ],
+   [
+    "/tag/commercial-fit-out-india/",
+    696
+   ],
+   [
+    "/2026/07/17/what-is-a-turnkey-interior-project/",
+    0
+   ],
+   [
+    "/2026/07/30/how-3d-visualization-saves-you-money/",
+    0
+   ],
+   [
+    "/blogs/",
+    0
+   ],
+   [
+    "/about/",
+    0
+   ],
+   [
+    "/design-services/",
+    0
+   ]
+  ],
+  "markets": [
+   [
+    "India",
+    38304
+   ],
+   [
+    "Denmark",
+    696
+   ],
+   [
+    "Belgium",
+    0
+   ],
+   [
+    "United States",
+    0
+   ],
+   [
+    "United Kingdom",
+    0
+   ],
+   [
+    "Indonesia",
+    0
+   ]
+  ],
+  "take": "The newest interiors account and already converting above portfolio average. The blog programme is indexing fast, with turnkey-interiors and 3D-visualisation posts picking up impressions early."
+ },
+ {
+  "name": "Jalaparva Blog",
+  "dom": "blogs.jalaparva.in",
+  "sector": "Travel content hub",
+  "since": "10 May 2026",
+  "clicks": 26000,
+  "impr": 92000,
+  "ctr": "28.3%",
+  "pos": "5.8",
+  "d90": 26000,
+  "device": {
+   "Mobile": 19500,
+   "Desktop": 6500,
+   "Tablet": 0
+  },
+  "queries": [
+   [
+    "backpacking trips from bangalore",
+    1625
+   ],
+   [
+    "jalaparva",
+    0
+   ],
+   [
+    "aghanashini falls",
+    0
+   ],
+   [
+    "aghanashini trek",
+    0
+   ],
+   [
+    "jala parva",
+    0
+   ],
+   [
+    "kali waterfall",
+    0
+   ],
+   [
+    "aghanashini river falls",
+    0
+   ],
+   [
+    "jala parva reviews",
+    0
+   ],
+   [
+    "calm places to visit in bangalore",
+    0
+   ],
+   [
+    "peaceful places in bangalore",
+    0
+   ]
+  ],
+  "pages": [
+   [
+    "/offbeat-backpacking-trips-from-bangalore/",
+    3250
+   ],
+   [
+    "/nature-retreats-from-bangalore-pure-peace/",
+    3250
+   ],
+   [
+    "/gokarna-backpacking-trip-complete-guide/",
+    3250
+   ],
+   [
+    "/agumbe-backpacking-trip-rainforest-beauty/",
+    3250
+   ],
+   [
+    "/offbeat-waterfall-trails-in-aghanashini/",
+    1625
+   ],
+   [
+    "/ (homepage)",
+    1625
+   ],
+   [
+    "/bandaje-falls-trek/",
+    1625
+   ],
+   [
+    "/weekend-peace-trips-from-bangalore/",
+    1625
+   ],
+   [
+    "/kali-waterfalls-trek/",
+    1625
+   ],
+   [
+    "/aghanashini-waterfalls-trek/",
+    1625
+   ]
+  ],
+  "markets": [
+   [
+    "India",
+    21125
+   ],
+   [
+    "Netherlands",
+    3250
+   ],
+   [
+    "Indonesia",
+    1625
+   ],
+   [
+    "United States",
+    0
+   ],
+   [
+    "Vietnam",
+    0
+   ],
+   [
+    "United Kingdom",
+    0
+   ]
+  ],
+  "take": "A support property built to widen Jalaparva's keyword footprint beyond brand terms, and it is working: strong average position on non-brand trek and backpacking queries."
+ },
+ {
+  "name": "Orika Naturals",
+  "dom": "orikanaturals.com",
+  "sector": "Sustainable tableware",
+  "since": "5 Aug 2026",
+  "clicks": 12500,
+  "impr": 46000,
+  "ctr": "27.2%",
+  "pos": "6.6",
+  "d90": 12500,
+  "device": {
+   "Desktop": 6944,
+   "Mobile": 5556
+  },
+  "queries": [
+   [
+    "areca leaf square plate",
+    0
+   ],
+   [
+    "who is the best supplier of areca leaf plates?",
+    0
+   ],
+   [
+    "areca nut plates",
+    0
+   ]
+  ],
+  "pages": [
+   [
+    "/ (homepage)",
+    8333
+   ],
+   [
+    "/collections/all-products?page=2",
+    2778
+   ],
+   [
+    "/pages/bulk-orders",
+    1389
+   ],
+   [
+    "/pages/about-us",
+    0
+   ],
+   [
+    "/pages/contact",
+    0
+   ],
+   [
+    "/products/areca-palm-leaf-dinnerware-combo",
+    0
+   ],
+   [
+    "/collections/bowls",
+    0
+   ],
+   [
+    "/products/partition-plates-10-inches-square",
+    0
+   ],
+   [
+    "/collections/family-packs",
+    0
+   ]
+  ],
+  "markets": [
+   [
+    "India",
+    12500
+   ],
+   [
+    "United States",
+    0
+   ],
+   [
+    "Malaysia",
+    0
+   ],
+   [
+    "United Arab Emirates",
+    0
+   ],
+   [
+    "Spain",
+    0
+   ],
+   [
+    "Canada",
+    0
+   ]
+  ],
+  "take": "Sustainable tableware with clean indexing and commercial-intent queries arriving from the start. Collection and bulk-order pages are already discovered."
+ },
+ {
+  "name": "Svarnadeep",
+  "dom": "svarnadeep.com",
+  "sector": "Pooja & devotional goods",
+  "since": "16 Mar 2026",
+  "clicks": 9000,
+  "impr": 34000,
+  "ctr": "26.5%",
+  "pos": "5.9",
+  "d90": 4200,
+  "device": {
+   "Desktop": 6000,
+   "Mobile": 3000
+  },
+  "queries": [
+   [
+    "ghee cotton wicks",
+    0
+   ],
+   [
+    "godaddy",
+    0
+   ],
+   [
+    "global_prikol",
+    0
+   ],
+   [
+    "lakshmi candle",
+    0
+   ],
+   [
+    "ghee wicks",
+    0
+   ],
+   [
+    "swarna deep",
+    0
+   ],
+   [
+    "round cotton wicks",
+    0
+   ],
+   [
+    "cotton wicks for diya",
+    0
+   ],
+   [
+    "godady",
+    0
+   ],
+   [
+    "cotton wick for diya",
+    0
+   ]
+  ],
+  "pages": [
+   [
+    "/ (homepage)",
+    6000
+   ],
+   [
+    "/products/ghee-cotton-wicks",
+    1500
+   ],
+   [
+    "/collections/fragrance-cotton-wicks",
+    1500
+   ],
+   [
+    "/products/camphor-cotton-wicks",
+    0
+   ],
+   [
+    "/products/round-cotton-wicks",
+    0
+   ],
+   [
+    "/blogs/news/coloured-tip-cotton-wicks-for-diya-pooja",
+    0
+   ],
+   [
+    "/collections/camphor-cotton-wicks",
+    0
+   ],
+   [
+    "/pages/about-us",
+    0
+   ],
+   [
+    "/blogs/news/camphor-cotton-wicks-for-diya-pooja",
+    0
+   ]
+  ],
+  "markets": [
+   [
+    "India",
+    9000
+   ],
+   [
+    "United States",
+    0
+   ],
+   [
+    "Sri Lanka",
+    0
+   ],
+   [
+    "United Arab Emirates",
+    0
+   ],
+   [
+    "Nepal",
+    0
+   ],
+   [
+    "Indonesia",
+    0
+   ]
+  ],
+  "take": "Product pages for ghee, camphor and round cotton wicks hold a workable average position, so category terms are within reach. A seasonal business where the festival calendar does much of the lifting."
+ }
+];
+
+var CAT = {
+  'pharmaclinix.com':'ecommerce','jalaparva.in':'travel','vscrapit.com':'services',
+  'souvenirsofindia.com':'ecommerce','sndmasala.in':'food','ukfoods.in':'food',
+  'kryptontools.in':'b2b','lifespacedesigns.in':'services','blogs.jalaparva.in':'travel',
+  'orikanaturals.com':'ecommerce','svarnadeep.com':'ecommerce'
+};
+
+
+var MAXC = Math.max.apply(null, CLIENTS.map(function(c){return c.clicks}));
+var n = function(v){ return v.toLocaleString('en-IN'); };
+var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function initials(name){
+  return name.split(/\s+/).map(function(w){return w[0];}).join('').slice(0,2).toUpperCase();
+}
+
+document.getElementById('track').innerHTML =
+  CLIENTS.map(function(c,i){return '<span class="orb-chip'+(i===0?' hot':'')+'"><em>'+initials(c.name)+'</em>'+c.name+'</span>'}).join('') +
+  CLIENTS.map(function(c,i){return '<span class="orb-chip'+(i===0?' hot':'')+'"><em>'+initials(c.name)+'</em>'+c.name+'</span>'}).join('');
+
+document.getElementById('grid').innerHTML = CLIENTS.map(function(c,i){
+  var w = c.clicks / MAXC * 100, r = c.d90 / MAXC * 100;
+  var earlier = Math.max(w - r, 0);
+  return '<button class="card reveal" type="button" data-cat="'+(CAT[c.dom]||'ecommerce')+'" data-i="'+i+'">'+
+    '<div class="cb">'+
+      '<div class="crow"><div><div class="cname">'+c.name+'</div>'+
+      '<div class="cmeta">'+c.dom+' · live since '+c.since+'</div></div>'+
+      '<div class="sector">'+c.sector+'</div></div>'+
+      '<div class="bar"><i style="width:'+earlier+'%"></i><i class="recent" style="width:'+r+'%"></i></div>'+
+      '<div class="barleg"><s>Earlier clicks</s><s class="r">Last 90 days</s></div>'+
+      '<div class="mini">'+
+        '<div><b>'+n(c.clicks)+'</b><small>Clicks</small></div>'+
+        '<div><b>'+n(c.impr)+'</b><small>Impr.</small></div>'+
+        '<div><b>'+c.ctr+'</b><small>CTR</small></div>'+
+        '<div><b>'+c.pos+'</b><small>Avg pos</small></div>'+
+      '</div>'+
+      '<span class="hint">Open the case <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 13L13 3M13 3H6M13 3v7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>'+
+    '</div></button>';
+}).join('');
+
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+var co = new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(!e.isIntersecting) return;
+    co.unobserve(e.target);
+    var el = e.target, end = parseFloat(el.dataset.count), sfx = el.dataset.suffix || '', dec = +(el.dataset.dec||0);
+    if(reduce){
+      el.textContent = (dec ? end.toFixed(dec) : Math.round(end).toLocaleString('en-IN')) + sfx;
+      return;
+    }
+    var t0 = null;
+    function step(t){
+      if(!t0) t0 = t;
+      var p = Math.min((t-t0)/1200, 1), v = end * (1 - Math.pow(1-p,3));
+      el.textContent = (dec ? v.toFixed(dec) : Math.round(v).toLocaleString('en-IN')) + sfx;
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  });
+},{threshold:.4});
+document.querySelectorAll('[data-count]').forEach(function(el){ co.observe(el); });
+
+document.querySelectorAll('.chip').forEach(function(chip){
+  chip.addEventListener('click', function(){
+    var f = chip.dataset.filter;
+    document.querySelectorAll('.chip').forEach(function(c){ c.setAttribute('aria-pressed', String(c===chip)); });
+    document.querySelectorAll('.card').forEach(function(card){
+      card.classList.toggle('hide', !(f==='all' || card.dataset.cat===f));
+    });
+  });
+});
+
+var overlay = document.getElementById('overlay'), last = null, lastFocus = null;
+var DEVC = {Mobile:'var(--orange)', Desktop:'rgba(255,255,255,.45)', Tablet:'rgba(154,163,181,.9)'};
+function rows(arr){
+  var max = 0;
+  arr.forEach(function(r){ if(r[1] > max) max = r[1]; });
+  return arr.map(function(r){
+    var pct = max ? (r[1] / max * 100) : 0;
+    return '<div class="rl"><div class="rl-top"><span title="'+r[0].replace(/"/g,'&quot;')+'">'+r[0]+'</span><b>'+n(r[1])+'</b></div><div class="rl-bar" aria-hidden="true"><i style="width:'+pct+'%"></i></div></div>';
+  }).join('');
+}
+function trapTab(e){
+  if(e.key !== 'Tab' || !overlay.classList.contains('on')) return;
+  var nodes = overlay.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+  var focusable = Array.prototype.filter.call(nodes, function(el){ return !el.hasAttribute('disabled') && el.offsetParent !== null; });
+  if(!focusable.length) return;
+  var first = focusable[0], lastEl = focusable[focusable.length-1];
+  if(e.shiftKey && document.activeElement === first){ e.preventDefault(); lastEl.focus(); }
+  else if(!e.shiftKey && document.activeElement === lastEl){ e.preventDefault(); first.focus(); }
+}
+document.querySelectorAll('.card').forEach(function(card){
+  card.addEventListener('click', function(){
+    var c = CLIENTS[+card.dataset.i];
+    last = card;
+    lastFocus = document.activeElement;
+    setMenu(false);
+    document.getElementById('mTitle').textContent = c.name;
+    document.getElementById('mMeta').textContent = c.dom + '  ·  ' + c.sector + '  ·  live since ' + c.since;
+    document.getElementById('mStats').innerHTML =
+      '<div><b>'+n(c.clicks)+'</b><small>Clicks</small></div>'+
+      '<div><b>'+n(c.impr)+'</b><small>Impressions</small></div>'+
+      '<div><b>'+c.ctr+'</b><small>CTR</small></div>'+
+      '<div><b>'+c.pos+'</b><small>Avg position</small></div>'+
+      '<div><b>'+n(c.d90)+'</b><small>Last 90 days</small></div>';
+    document.getElementById('mTake').textContent = c.take;
+    document.getElementById('mQ').innerHTML = rows(c.queries);
+    document.getElementById('mP').innerHTML = rows(c.pages);
+    document.getElementById('mM').innerHTML = rows(c.markets);
+    var tot = 0; for(var k in c.device) tot += c.device[k];
+    document.getElementById('mD').innerHTML = Object.keys(c.device).map(function(k){
+      return '<i style="width:'+(tot ? c.device[k]/tot*100 : 0)+'%;background:'+(DEVC[k]||'var(--orange)')+'"></i>';
+    }).join('');
+    document.getElementById('mDL').innerHTML = Object.keys(c.device).map(function(k){
+      return '<span>'+k+' '+Math.round((tot?c.device[k]/tot:0)*100)+'% ('+n(c.device[k])+')</span>';
+    }).join('');
+    overlay.classList.add('on');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('close').focus();
+  });
+});
+function closeModal(){
+  overlay.classList.remove('on');
+  document.body.style.overflow = '';
+  if(last) last.focus();
+  else if(lastFocus) lastFocus.focus();
+}
+document.getElementById('close').addEventListener('click', closeModal);
+overlay.addEventListener('click', function(e){ if(e.target === overlay) closeModal(); });
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape' && overlay.classList.contains('on')) closeModal();
+  trapTab(e);
+});
+
+var header = document.getElementById('siteHeader');
+var menuBtn = document.getElementById('menuBtn');
+var navLinks = document.getElementById('navLinks');
+function setMenu(open){
+  header.classList.toggle('is-open', open);
+  menuBtn.setAttribute('aria-expanded', String(open));
+  menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  if(!overlay.classList.contains('on')) document.body.style.overflow = open ? 'hidden' : '';
+}
+window.addEventListener('resize', function(){ if(window.innerWidth > 1024) setMenu(false); });
+menuBtn.addEventListener('click', function(){ setMenu(!header.classList.contains('is-open')); });
+navLinks.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click', function(){ setMenu(false); });
+});
+document.querySelector('.nav-cta').addEventListener('click', function(){ setMenu(false); });
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape' && header.classList.contains('is-open')) setMenu(false);
+});
+
+var FLIP_STATS = [
+  { value:'2K+', label:'Websites completed' },
+  { value:'1K+', label:'Websites SEO completed' },
+  { value:'800+', label:'Socials handled' }
+];
+var flipCard = document.getElementById('statFlip');
+var flipFace = document.getElementById('flipFace');
+var flipValue = document.getElementById('flipValue');
+var flipLabel = document.getElementById('flipLabel');
+var flipTicks = flipCard.querySelectorAll('.flip-ticks i');
+var flipIndex = 0, flipPaused = false, flipHold = null;
+function flipHoldStart(){
+  clearTimeout(flipHold);
+  if(reduce || flipPaused) return;
+  flipHold = setTimeout(flipTurn, 3200);
+}
+function flipTurn(){
+  flipFace.classList.add('is-out');
+  setTimeout(function(){
+    flipIndex = (flipIndex + 1) % FLIP_STATS.length;
+    flipValue.textContent = FLIP_STATS[flipIndex].value;
+    flipLabel.textContent = FLIP_STATS[flipIndex].label;
+    for(var i = 0; i < flipTicks.length; i++) flipTicks[i].classList.toggle('on', i === flipIndex);
+    flipFace.classList.remove('is-out');
+    flipFace.classList.add('is-in');
+    requestAnimationFrame(function(){
+      requestAnimationFrame(function(){ flipFace.classList.remove('is-in'); });
+    });
+    flipHoldStart();
+  }, 300);
+}
+flipCard.addEventListener('mouseenter', function(){ flipPaused = true; clearTimeout(flipHold); });
+flipCard.addEventListener('mouseleave', function(){ flipPaused = false; flipHoldStart(); });
+flipHoldStart();
+
+var sections = ['work','process','method','contact'].map(function(id){ return document.getElementById(id); });
+var navObs = new IntersectionObserver(function(entries){
+  entries.forEach(function(entry){
+    if(!entry.isIntersecting) return;
+    document.querySelectorAll('.nav-links a').forEach(function(a){
+      a.classList.toggle('is-active', a.getAttribute('data-nav') === entry.target.id);
+    });
+  });
+},{rootMargin:'-40% 0px -50% 0px', threshold:0.01});
+sections.forEach(function(s){ if(s) navObs.observe(s); });
+
+(function(){
+  var tabs = [].slice.call(document.querySelectorAll('.step-tab'));
+  var panels = [].slice.call(document.querySelectorAll('.process-panel'));
+  var fill = document.getElementById('processFill');
+  var pos = document.getElementById('processPos');
+  var ui = document.getElementById('processUI');
+  if(!tabs.length) return;
+  var i = 0, timer = null;
+  function pad(n){ return (n<10?'0':'')+n; }
+  function go(next, fromUser){
+    i = (next + tabs.length) % tabs.length;
+    tabs.forEach(function(t, idx){
+      var on = idx===i;
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1;
+    });
+    panels.forEach(function(p, idx){
+      p.classList.toggle('is-on', idx===i);
+    });
+    if(fill) fill.style.width = ((i+1)/tabs.length*100)+'%';
+    if(pos) pos.textContent = pad(i+1)+' / '+pad(tabs.length);
+    if(fromUser) restart();
+  }
+  function restart(){
+    if(timer) clearInterval(timer);
+    if(reduce) return;
+    timer = setInterval(function(){ go(i+1, false); }, 5500);
+  }
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){ go(+t.dataset.step, true); });
+    t.addEventListener('keydown', function(e){
+      if(e.key==='ArrowRight'){ e.preventDefault(); go(i+1, true); tabs[i].focus(); }
+      if(e.key==='ArrowLeft'){ e.preventDefault(); go(i-1, true); tabs[i].focus(); }
+    });
+  });
+  document.getElementById('processNext').addEventListener('click', function(){ go(i+1, true); });
+  document.getElementById('processPrev').addEventListener('click', function(){ go(i-1, true); });
+  if(ui){
+    ui.addEventListener('mouseenter', function(){ if(timer) clearInterval(timer); });
+    ui.addEventListener('mouseleave', restart);
+    ui.addEventListener('focusin', function(){ if(timer) clearInterval(timer); });
+    ui.addEventListener('focusout', function(e){
+      if(!ui.contains(e.relatedTarget)) restart();
+    });
+  }
+  go(0, false);
+  restart();
+})();
+
+(function(){
+  var form = document.getElementById('auditForm');
+  var statusEl = document.getElementById('formStatus');
+  var submitBtn = document.getElementById('auditSubmit');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    statusEl.className = 'form-status';
+    statusEl.textContent = '';
+    if(!form.reportValidity()) return;
+    submitBtn.disabled = true;
+    statusEl.textContent = 'Sending…';
+    fetch(form.action, { method:'POST', body:new FormData(form), headers:{ 'Accept':'application/json' } })
+      .then(function(res){ return res.json().then(function(data){ return { ok:res.ok, data:data }; }); })
+      .then(function(result){
+        if(result.ok && result.data && result.data.ok){
+          statusEl.className = 'form-status ok';
+          statusEl.textContent = result.data.message || 'Thanks. We will send the audit shortly.';
+          form.reset();
+        } else {
+          statusEl.className = 'form-status err';
+          statusEl.textContent = (result.data && result.data.error) || 'Could not send. Please try again.';
+        }
+      })
+      .catch(function(){
+        statusEl.className = 'form-status err';
+        statusEl.textContent = 'Network error. Check the page is on Hostinger with send-audit.php uploaded.';
+      })
+      .finally(function(){ submitBtn.disabled = false; });
+  });
+})();
+
+</script>
+</body>
+</html>

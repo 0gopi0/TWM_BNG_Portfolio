@@ -1568,6 +1568,7 @@ footer.site{padding:28px 0 40px;color:var(--muted);font-size:14px}
 }
 @media(max-width:760px){
   .wl-hero{padding:48px 0 46px}
+  .wl-art{display:none}
   .wl-paths{grid-template-columns:1fr}
 }
 @media(max-width:560px){

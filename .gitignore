@@ -12,9 +12,6 @@ dist
 dist-ssr
 *.local
 
-# Static assets (heavy media kept out of git)
-public/
-
 # Tooling
 .commandcode
 

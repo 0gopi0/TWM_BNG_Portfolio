@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="The Website Makers">
+  <defs>
+    <linearGradient id="mark" x1="11" y1="14" x2="53" y2="51" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF7A45" />
+      <stop offset="1" stop-color="#FF5A1F" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="#0A0C14" />
+  <path
+    d="M15.5 47V18.5l16.5 19 16.5-19V47"
+    fill="none"
+    stroke="url(#mark)"
+    stroke-width="8.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

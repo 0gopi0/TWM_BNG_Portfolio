@@ -2,6 +2,8 @@ import { useEffect } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ContactSection from '../components/ContactSection'
+import Faq from '../components/Faq'
+import { MARKETING_FAQS } from '../data/faqs'
 import Floaters from '../components/marketing/Floaters'
 import MarketingHero from '../components/marketing/MarketingHero'
 import WorkTabs from '../components/marketing/WorkTabs'
@@ -29,11 +31,9 @@ export default function DigitalMarketing() {
         <Benefits />
         <ContactSection
           sectionId="dm-contact"
-          eyebrow="/05 — Next"
+          aside={<Faq items={MARKETING_FAQS} eyebrow="/05 — FAQs" />}
           heading="Send us your brand."
-          description="Tell us who you want to reach and what you sell. You get a 90 day content plan, the formats we would run, and the hours it asks of you."
           messagePlaceholder="e.g. founder-led content, Instagram plus LinkedIn, 2 calls a week"
-          submitLabel="Request a content plan"
           successMessage="Thanks. We will come back with the plan shortly."
         />
       </main>

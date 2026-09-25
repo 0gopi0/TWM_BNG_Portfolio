@@ -12,7 +12,7 @@ export default function ChannelSplit() {
     <section id="channels">
       <div className="wrap">
         <div className="ads-head reveal" ref={headRef}>
-          <p className="ads-num">01 / Channels</p>
+          <p className="ads-num">02 / Channels</p>
           <h2>Search captures demand. Social creates it.</h2>
           <p>
             Most accounts starve one and overfeed the other. We split the budget by what each platform is actually good

@@ -37,11 +37,19 @@ export default function AdsResults() {
     tabRefs.current[next]?.focus()
   }
 
+  // The panel remounts per account, so hand focus back to the arrow that was pressed.
+  function step(direction, buttonId) {
+    setActiveId(AD_CLIENTS[(index + direction + AD_CLIENTS.length) % AD_CLIENTS.length].id)
+    requestAnimationFrame(() => document.getElementById(buttonId)?.focus())
+  }
+
+  const pad = (n) => String(n).padStart(2, '0')
+
   return (
     <section id="results">
       <div className="wrap">
         <div className="ads-head reveal" ref={headRef}>
-          <p className="ads-num">02 / Results</p>
+          <p className="ads-num">01 / Results</p>
           <h2>Pick an account, see the whole story</h2>
           <p>
             Five live Meta accounts, pulled straight from Ads Manager. What we spent, how many leads or conversations
@@ -107,16 +115,45 @@ export default function AdsResults() {
                   {client.sector} · {client.period} · Meta Ads Manager
                 </p>
               </div>
-              <span className="ads-detail-marks" aria-hidden="true">
-                {client.platforms.map((p) => {
-                  const Mark = MARKS[p]
-                  return (
-                    <span className={`ads-mark is-${p}`} key={p}>
-                      <Mark />
-                    </span>
-                  )
-                })}
-              </span>
+              <div className="ads-detail-side">
+                <span className="ads-detail-marks" aria-hidden="true">
+                  {client.platforms.map((p) => {
+                    const Mark = MARKS[p]
+                    return (
+                      <span className={`ads-mark is-${p}`} key={p}>
+                        <Mark />
+                      </span>
+                    )
+                  })}
+                </span>
+                <div className="ads-detail-nav">
+                  <button
+                    className="icon-btn"
+                    type="button"
+                    id="resultsPrev"
+                    aria-label="Previous account"
+                    onClick={() => step(-1, 'resultsPrev')}
+                  >
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="M10 3L5 8l5 5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </button>
+                  <span>
+                    {pad(index + 1)} / {pad(AD_CLIENTS.length)}
+                  </span>
+                  <button
+                    className="icon-btn"
+                    type="button"
+                    id="resultsNext"
+                    aria-label="Next account"
+                    onClick={() => step(1, 'resultsNext')}
+                  >
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="M6 3l5 5-5 5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </header>
 
             <div className="ads-detail-tiles">

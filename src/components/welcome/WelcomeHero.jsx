@@ -1,5 +1,7 @@
+import { LuArrowRight, LuLayoutGrid } from 'react-icons/lu'
 import Floaters from './Floaters'
-import Signpost from './Signpost'
+import TechTiles from './TechTiles'
+import HeroSearch from './HeroSearch'
 
 export default function WelcomeHero() {
   return (
@@ -10,40 +12,37 @@ export default function WelcomeHero() {
         <span className="wl-orb b"></span>
       </div>
 
+      <TechTiles />
+
       <Floaters />
 
       <div className="wrap wl-hero-inner">
-        <div className="wl-hero-copy">
-          <p className="wl-eyebrow wl-anim" style={{ '--d': '0ms' }}>
-            Welcome · The Website Makers
-          </p>
-
-          <h1 className="wl-headline wl-anim" style={{ '--d': '90ms' }}>
-            You are in the <span className="wl-mark">right place.</span>
+        <div className="wl-hero-head">
+          <h1 className="wl-headline wl-anim" style={{ '--d': '0ms' }}>
+            Whatever you searched, you’re in the <span className="hl">right place.</span>
           </h1>
-
-          <p className="wl-lede wl-anim" style={{ '--d': '200ms' }}>
-            Four things we do well. Pick the one that sounds like your problem, or skip to the section you came for.
+          <p className="wl-sub wl-anim" style={{ '--d': '120ms' }}>
+            Young creative team for all your business solutions.
           </p>
-
-          <div className="hero-actions wl-actions wl-anim" style={{ '--d': '300ms' }}>
-            <a className="btn btn-primary" href="#paths">
-              Show me the four
-              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path
-                  d="M3 13L13 3M13 3H6M13 3v7"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </a>
-          </div>
         </div>
 
-        <div className="wl-art wl-anim" style={{ '--d': '520ms' }}>
-          <Signpost />
+        <div className="wl-hero-panel wl-anim" style={{ '--d': '240ms' }}>
+          <HeroSearch />
+        </div>
+
+        <div className="hero-actions wl-actions wl-anim" style={{ '--d': '360ms' }}>
+          <a className="btn btn-glow" href="#wl-contact">
+            Talk to an expert
+            <span className="btn-glow-icon" aria-hidden="true">
+              <LuArrowRight />
+            </span>
+          </a>
+          <a className="btn btn-soft" href="#paths">
+            Explore our services
+            <span className="btn-soft-icon" aria-hidden="true">
+              <LuLayoutGrid />
+            </span>
+          </a>
         </div>
       </div>
     </section>

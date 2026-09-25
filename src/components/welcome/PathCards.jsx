@@ -55,8 +55,8 @@ export default function PathCards() {
     <section id="paths" className="wl-paths-section">
       <div className="wrap">
         <div className="wl-head reveal" ref={headRef}>
-          <p className="wl-eyebrow">Start here</p>
-          <h2>What do you need?</h2>
+          <p className="wl-eyebrow">Our services</p>
+          <h2>Make your business stand out.</h2>
         </div>
 
         <ul className="wl-paths">

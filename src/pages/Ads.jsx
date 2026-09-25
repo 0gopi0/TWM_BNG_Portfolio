@@ -2,6 +2,8 @@ import { useEffect } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ContactSection from '../components/ContactSection'
+import Faq from '../components/Faq'
+import { ADS_FAQS } from '../data/faqs'
 import AdsHero from '../components/ads/AdsHero'
 import BrandMarquee from '../components/ads/BrandMarquee'
 import ChannelSplit from '../components/ads/ChannelSplit'
@@ -24,18 +26,16 @@ export default function Ads() {
       <main>
         <AdsHero />
         <BrandMarquee />
-        <ChannelSplit />
         <AdsResults />
+        <ChannelSplit />
         <WeeklyRhythm />
         <MetricWatch />
         <TrackingChain />
         <ContactSection
           sectionId="ads-contact"
-          eyebrow="/06 — Next"
+          aside={<Faq items={ADS_FAQS} eyebrow="/06 — FAQs" />}
           heading="Send us your account."
-          description="We review the last 30 days of spend: structure, wasted spend, creative and tracking. You get a written plan whether or not you hire us."
           messagePlaceholder="e.g. Google Search plus Meta, ₹3L a month, 40 leads a month"
-          submitLabel="Request a spend review"
           successMessage="Thanks. We will come back with the review shortly."
         />
       </main>

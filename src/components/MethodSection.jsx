@@ -17,12 +17,6 @@ export default function MethodSection() {
             <b>
               <i></i>Performance on Search results
             </b>
-            <div className="method-chips">
-              <span className="hot">16-month window</span>
-              <span>27 Aug 2025 – 12 Aug 2026</span>
-              <span>Search type: Web</span>
-              <span>Top ten rows</span>
-            </div>
           </div>
           <div className="method-grid">
             <div className="m-stack">

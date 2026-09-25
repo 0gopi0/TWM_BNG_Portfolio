@@ -180,7 +180,7 @@ export const STORIES = [
     mark: 'DF',
     result: '2.4x reach in ninety days',
     quote:
-      'They took the whole content load off my plate. I record once a month and the rest of it just happens, on schedule, in my voice.',
+      'I used to make reels myself at night after packing orders. Now we shoot once a month and they handle the rest. The captions actually sound like me, which was my biggest worry.',
     name: 'D2C founder',
     role: 'Skincare · Bengaluru',
   },
@@ -189,7 +189,7 @@ export const STORIES = [
     mark: 'SF',
     name: 'Service founder',
     role: 'Agency · Pune',
-    note: 'Posting 4x a week with one hour a week of input.',
+    note: 'We’re posting four times a week now. I spend maybe an hour a week on it.',
     platforms: ['instagram', 'youtube'],
   },
   {
@@ -197,7 +197,7 @@ export const STORIES = [
     mark: 'BF',
     result: '18 inbound calls a month',
     quote:
-      'We stopped guessing. The plan says which idea becomes a post, which post becomes a lead, and what we drop when it does not.',
+      'Every month they show us which posts got us demo calls and which didn’t. That alone changed how we plan. We’ve dropped two formats we were sure would work.',
     name: 'B2B founder',
     role: 'SaaS · Remote',
   },
@@ -206,14 +206,15 @@ export const STORIES = [
     mark: 'AO',
     name: 'Agency owner',
     role: 'Recruiting · Hyderabad',
-    note: 'Inbound calls booked from content, not cold outreach.',
+    note: 'Most of our client calls come from Instagram now. We’ve almost stopped cold emailing.',
     platforms: ['instagram', 'x'],
   },
   {
     kind: 'quote',
     mark: 'PB',
     result: 'Four hours a month, total',
-    quote: 'Four hours of my month, and the channel finally looks like a business rather than a hobby.',
+    quote:
+      'It takes about four hours of my month, that’s it. My channel finally looks professional, and a few new clients have told me they found me on YouTube.',
     name: 'Personal brand',
     role: 'Coaching · Mumbai',
   },

@@ -1,3 +1,32 @@
+// Hero search: each service shows as a search result. Queries are typed out in turn;
+// keywords match what a visitor types (longer matches weigh more).
+export const HERO_SEARCH = [
+  {
+    to: '/seo',
+    title: 'SEO that brings customers, not just traffic',
+    queries: ['seo agency in bengaluru', 'get my site on google'],
+    keywords: ['seo', 'rank', 'search', 'organic', 'traffic', 'keyword', 'on google', 'google search', 'visibility'],
+  },
+  {
+    to: '/ads',
+    title: 'Google and Meta ads that pay back',
+    queries: ['google ads expert', 'meta ads for my brand'],
+    keywords: ['ads', 'advert', 'ppc', 'meta', 'facebook', 'campaign', 'leads', 'google ads', 'instagram ads', 'budget'],
+  },
+  {
+    to: '/digital-marketing',
+    title: 'Reels and social content that books calls',
+    queries: ['reels for my business'],
+    keywords: ['reel', 'content', 'social', 'instagram', 'video', 'post', 'marketing', 'brand', 'youtube', 'linkedin', 'logo', 'design'],
+  },
+  {
+    to: '/web-development',
+    title: 'Websites and apps built to convert',
+    queries: ['build my website', 'shopify developer'],
+    keywords: ['website', 'web', 'site', 'app', 'shopify', 'wordpress', 'store', 'develop', 'landing', 'ecommerce'],
+  },
+]
+
 export const PATHS = [
   {
     key: 'seo',

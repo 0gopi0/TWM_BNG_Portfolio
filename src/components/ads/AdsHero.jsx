@@ -1,3 +1,4 @@
+import { LuTrendingUp } from 'react-icons/lu'
 import { ACCOUNT, SIGNALS } from '../../data/ads'
 import { barRects, linePath } from '../../utils'
 
@@ -24,20 +25,25 @@ export default function AdsHero() {
               against that number every week.
             </p>
             <div className="hero-actions">
-              <a className="btn btn-primary" href="#ads-contact">
+              <a className="btn btn-glow" href="#ads-contact">
                 Get a spend review
-                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path
-                    d="M3 13L13 3M13 3H6M13 3v7"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                <span className="btn-glow-icon">
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path
+                      d="M3 13L13 3M13 3H6M13 3v7"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
               </a>
-              <a className="btn btn-ghost" href="#channels">
-                See how we run it
+              <a className="btn btn-soft" href="#results">
+                Results
+                <span className="btn-soft-icon" aria-hidden="true">
+                  <LuTrendingUp />
+                </span>
               </a>
             </div>
 

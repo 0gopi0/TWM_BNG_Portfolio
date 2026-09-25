@@ -2,6 +2,8 @@ import { useEffect } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ContactSection from '../components/ContactSection'
+import Faq from '../components/Faq'
+import { WEBDEV_FAQS } from '../data/faqs'
 import WebDevHero from '../components/webdev/WebDevHero'
 import TechCarousel from '../components/webdev/TechCarousel'
 import ApproachSection from '../components/webdev/ApproachSection'
@@ -47,11 +49,9 @@ export default function WebDevelopment() {
 
         <ContactSection
           sectionId="webdev-contact"
-          eyebrow="/04 — Next"
+          aside={<Faq items={WEBDEV_FAQS} eyebrow="/04 — FAQs" />}
           heading="Tell us what you're building."
-          description="Send a brief — new site, migration, or a product that's outgrown its CMS. You get a scoped estimate and the stack we'd use, not a sales call."
           messagePlaceholder="e.g. WordPress to headless, a Shopify build, a custom app"
-          submitLabel="Request a build estimate"
           successMessage="Thanks. We will get back to you with a scoped estimate shortly."
         />
       </main>

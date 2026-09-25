@@ -1,3 +1,4 @@
+import { LuCalendarDays } from 'react-icons/lu'
 import BlocksHoverField from './BlocksHoverField'
 import CodePanel from './CodePanel'
 import OrbitStack from './OrbitStack'
@@ -30,19 +31,24 @@ export default function WebDevHero() {
           </h1>
 
           <p className="webdev-sub">
-            <span>WordPress, Shopify, or fully custom-coded —</span>
+            <span>WordPress, Shopify, or fully custom-coded —</span>
             <span>Node, Next.js, TanStack, and React under the hood.</span>
           </p>
 
           <div className="hero-actions">
-            <a href="#stack" className="btn btn-primary">
+            <a href="#stack" className="btn btn-glow">
               See the stack
-              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 13L13 3M13 3H6M13 3v7" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+              <span className="btn-glow-icon">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 13L13 3M13 3H6M13 3v7" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
             </a>
-            <a href="#webdev-contact" className="btn btn-ghost">
+            <a className="btn btn-soft" href="#webdev-contact">
               Book a strategy call
+              <span className="btn-soft-icon" aria-hidden="true">
+                <LuCalendarDays />
+              </span>
             </a>
           </div>
 

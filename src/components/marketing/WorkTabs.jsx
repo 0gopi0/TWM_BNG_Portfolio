@@ -3,6 +3,8 @@ import { useReveal } from '../../hooks/useReveal'
 import { WORK_TABS } from '../../data/marketing'
 
 const PAGE_SIZE = 6
+// Phones show a 2x2 grid, so they page in fours.
+const PHONE_PAGE_SIZE = 4
 
 function Slot({ tab, index }) {
   return (
@@ -193,8 +195,9 @@ function Lightbox({ item, kind, onClose }) {
 
 export default function WorkTabs() {
   const headRef = useReveal()
+  const [pageSize] = useState(() => (window.matchMedia('(max-width: 560px)').matches ? PHONE_PAGE_SIZE : PAGE_SIZE))
   const [activeKey, setActiveKey] = useState(WORK_TABS[0].key)
-  const [visible, setVisible] = useState(PAGE_SIZE)
+  const [visible, setVisible] = useState(pageSize)
   const [open, setOpen] = useState(null)
 
   const tab = WORK_TABS.find((t) => t.key === activeKey)
@@ -203,7 +206,7 @@ export default function WorkTabs() {
 
   function selectTab(key) {
     setActiveKey(key)
-    setVisible(PAGE_SIZE)
+    setVisible(pageSize)
     setOpen(null)
   }
 
@@ -244,7 +247,7 @@ export default function WorkTabs() {
 
         {remaining > 0 && (
           <div className="dm-work-more">
-            <button className="btn dm-btn-ghost" type="button" onClick={() => setVisible((v) => v + PAGE_SIZE)}>
+            <button className="btn dm-btn-ghost" type="button" onClick={() => setVisible((v) => v + pageSize)}>
               View more
               <b>{remaining} left</b>
             </button>

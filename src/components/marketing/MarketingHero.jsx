@@ -1,4 +1,5 @@
 import { FaPlay } from 'react-icons/fa6'
+import { LuLayoutGrid } from 'react-icons/lu'
 import { PROMISES } from '../../data/marketing'
 import ContentLoop from './ContentLoop'
 
@@ -37,21 +38,19 @@ export default function MarketingHero() {
           </p>
 
           <div className="hero-actions dm-actions dm-anim" style={{ '--d': '400ms' }}>
-            <a className="btn dm-btn-light" href="#dm-contact">
+            <a className="btn btn-glow" href="#dm-contact">
               Get started
+              <span className="btn-glow-icon">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 13L13 3M13 3H6M13 3v7" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
             </a>
-            <a className="btn dm-btn-ghost" href="#journey">
-              <span className="dm-dot" aria-hidden="true"></span>
-              How we do it
-              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path
-                  d="M2 8h11M9 4l4 4-4 4"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+            <a className="btn btn-soft" href="#work">
+              Our work
+              <span className="btn-soft-icon" aria-hidden="true">
+                <LuLayoutGrid />
+              </span>
             </a>
           </div>
         </div>

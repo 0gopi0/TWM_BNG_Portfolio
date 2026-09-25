@@ -1,3 +1,4 @@
+import { LuArrowRight, LuLayoutGrid } from 'react-icons/lu'
 import { useCountUp } from '../hooks/useCountUp'
 import { useReveal } from '../hooks/useReveal'
 import ClientMarquee from './ClientMarquee'
@@ -48,18 +49,21 @@ export default function Hero() {
               50 lakh search appearances across <span className="hl">11 client sites.</span>
             </h1>
             <p className="lede">
-              A full roster of organic results — from D2C skincare to industrial tooling. Open any client to see the
-              queries they rank for, the pages that earn the clicks, and the markets they reach.
+              Technical SEO, content and local search that turn rankings into enquiries. Open any client to see the
+              proof.
             </p>
             <div className="hero-actions">
-              <a href="#work" className="btn btn-primary">
-                Explore the work
-                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M3 13L13 3M13 3H6M13 3v7" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </a>
-              <a href="#contact" className="btn btn-ghost">
+              <a className="btn btn-glow" href="#contact">
                 Book a strategy call
+                <span className="btn-glow-icon" aria-hidden="true">
+                  <LuArrowRight />
+                </span>
+              </a>
+              <a className="btn btn-soft" href="#work">
+                Explore the work
+                <span className="btn-soft-icon" aria-hidden="true">
+                  <LuLayoutGrid />
+                </span>
               </a>
             </div>
             <p className="src">Combined organic performance · 16-month window to 12 Aug 2026 · Search type: Web</p>

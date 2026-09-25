@@ -1,14 +1,13 @@
 import { useRef, useState } from 'react'
 import { useReveal } from '../hooks/useReveal'
 
+// A compact callback form: name, mobile, optional email and a short message. `aside` (e.g. FAQs) sits to its left.
 export default function ContactSection({
+  aside = null,
   sectionId = 'contact',
   formAction = 'send-audit.php',
-  eyebrow = '/04 — Next',
   heading = 'Find out why you are not ranking.',
-  description = 'Send your URL. You get a short audit covering technical issues, the keywords you are missing, and what we would fix first. No cost. No pitch deck.',
-  messagePlaceholder = 'e.g. local SEO, product pages, blog traffic',
-  submitLabel = 'Request a free SEO audit',
+  messagePlaceholder = 'e.g. yoursite.com, we want more local enquiries',
   successMessage = 'Thanks. We will send the audit shortly.',
 }) {
   const ctaRef = useReveal()
@@ -45,12 +44,12 @@ export default function ContactSection({
   }
 
   return (
-    <section id={sectionId}>
-      <div className="wrap">
-        <div className="cta-wrap reveal" ref={ctaRef}>
-          <p className="num">{eyebrow}</p>
+    // The id sits on the form card, so contact links land on the form even when the FAQs stack above it.
+    <section>
+      <div className={`wrap${aside ? ' cta-split' : ''}`}>
+        {aside}
+        <div className="cta-wrap reveal" id={sectionId} ref={ctaRef}>
           <h2>{heading}</h2>
-          <p>{description}</p>
           <form
             className="audit-form"
             id="auditForm"
@@ -60,33 +59,45 @@ export default function ContactSection({
             ref={formRef}
             onSubmit={handleSubmit}
           >
-            <div>
+            <div className="is-half">
               <label htmlFor="name">Name</label>
               <input id="name" name="name" type="text" autoComplete="name" required maxLength={80} placeholder="Your name" />
             </div>
-            <div>
-              <label htmlFor="email">Email</label>
-              <input id="email" name="email" type="email" autoComplete="email" required maxLength={120} placeholder="you@company.com" />
+            <div className="is-half">
+              <label htmlFor="phone">Mobile</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                autoComplete="tel"
+                required
+                maxLength={20}
+                pattern="\+?[0-9 \-]{10,15}"
+                title="A mobile number with at least 10 digits, e.g. 98765 43210"
+                placeholder="+91 98765 43210"
+              />
             </div>
             <div>
-              <label htmlFor="website">Website URL</label>
-              <input id="website" name="website" type="url" inputMode="url" required maxLength={200} placeholder="https://your-site.com" />
-            </div>
-            <div>
-              <label htmlFor="message">
-                What should we look at first? <span style={{ fontWeight: 500, textTransform: 'none', letterSpacing: 0 }}>(optional)</span>
+              <label htmlFor="email">
+                Email <span style={{ fontWeight: 500, textTransform: 'none', letterSpacing: 0 }}>(optional)</span>
               </label>
-              <textarea id="message" name="message" maxLength={1000} placeholder={messagePlaceholder}></textarea>
+              <input id="email" name="email" type="email" autoComplete="email" maxLength={120} placeholder="you@company.com" />
+            </div>
+            <div>
+              <label htmlFor="message">Message</label>
+              <textarea id="message" name="message" rows={2} required maxLength={1000} placeholder={messagePlaceholder}></textarea>
             </div>
             <div className="hp" aria-hidden="true">
               <label htmlFor="company">Company</label>
               <input id="company" name="company" type="text" tabIndex={-1} autoComplete="off" />
             </div>
-            <button className="btn btn-primary" type="submit" id="auditSubmit" disabled={sending}>
-              {submitLabel}
-              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 13L13 3M13 3H6M13 3v7" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+            <button className="btn btn-glow" type="submit" id="auditSubmit" disabled={sending}>
+              Submit request
+              <span className="btn-glow-icon">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 13L13 3M13 3H6M13 3v7" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
             </button>
             <p className={`form-status${status.type ? ` ${status.type}` : ''}`} id="formStatus" role="status" aria-live="polite">
               {status.text}

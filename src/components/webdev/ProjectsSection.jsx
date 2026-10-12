@@ -4,7 +4,7 @@ import { PROJECTS, PROJECT_CATEGORIES } from '../../data/projects'
 
 const ALL = 'All'
 const TABS = [ALL, ...PROJECT_CATEGORIES]
-const PAGE_SIZE = 6
+const PAGE_SIZE = 12
 
 function mark(name) {
   const words = name.split(/\s+/).filter(Boolean)
@@ -25,7 +25,7 @@ function ProjectCard({ project, index }) {
     >
       <div className="project-media">
         {project.image ? (
-          <img src={project.image} alt={`${project.name} website`} loading="lazy" />
+          <img src={project.image} alt={`${project.name} website`} loading="lazy" referrerPolicy="no-referrer" />
         ) : (
           <span className="project-mark" aria-hidden="true">
             {mark(project.name)}
